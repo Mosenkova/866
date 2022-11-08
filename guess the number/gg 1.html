@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image"/x-icon" href="./favicon.ico">
+
+		<title>Игра "Угадай число"</title>
+
+		<style>
+			#textField, #tryButton, #showCounter {
+			display: none;
+			}
+
+			body {
+			letter-spacing: 0.06em;
+			background-image: url("fon.jpg");
+			background-repeat: no-repeat;
+			height: 92.9vh;
+			background-size: cover;
+			}
+
+			h1 {
+			font: 32px/48px, sans-serif;
+			color: #FF00FF;
+			text-shadow: 1px 1px 1px;
+			text-align: center;
+			margin: 50px auto 20px;
+			}
+
+			#pressButton {
+			font: 18px/24px;
+			color: #4B0082; 
+			
+			text-align: center;
+			margin: 20px auto;
+			}
+
+			#startbtn {
+			color: red;
+			font: 16px/24px, sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			width: 200px;
+			height: 50px;
+			border-radius: 50px;
+			border: none;
+			box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+			display: block;
+			margin: 50px auto;
+			cursor: pointer;
+			}
+
+			.wrapper {
+			border: 1px solid DarkGoldenRod; 
+			width: 500px;
+			height: 400px;
+			margin: 0 auto;
+			display: flex;
+			flex: none;
+			flex-direction: column;
+			gap: 5px;
+			background: rgba(220, 220, 220,.4);
+			border-radius: 30px;
+			justify-content: center;
+			}
+
+			.inner1 {
+			margin: 0 auto;
+			}
+
+			.inner2 {
+			margin: 0 auto;
+			padding: 0 20px;
+			}
+
+			.inner3 {
+			margin: 0 auto;
+			}
+
+			#tryButton {
+			color: black;
+			font: 24px/32px;
+			text-transform: uppercase;
+			width: 108px;
+			height: 92px;
+			border-radius: 10px;
+			border: 2px solid black;
+			margin: 20px;
+			cursor: pointer;
+			}
+
+			input {
+			display: block;
+			}
+
+			#textField {
+			width: 100px;
+			height: 86px;
+			text-align: center;
+			border-radius: 10px;
+			border: 2px solid black;
+			margin: 20px;
+			}
+
+			#enterNumber {
+			font: 22px/32px;
+			color: #800000;
+			text-align: center;
+			margin: 0px auto;
+			}
+
+			#cntr {
+			font: 18px/24px;
+			color: #CD5C5C;
+			margin: 15px 0 15px 0;
+			padding-left: 10px;
+			text-align: center;
+		}
+
+		</style>
+	</head>
+	<body>
+		<h1>Игра "Угадай число"</h1>
+		<div class="wrapper">
+			<div class="inner1">
+				<h5 id="pressButton">Для начала игры нажмите кнопку</h5>
+				<button type="button" id="startbtn">Начать игру</button>
+			</div>
+			<div class="inner2">
+				<h5 id="enterNumber"></h5>
+				<div class="inner3">
+					<input type="text" id="textField">
+					<button type="button" id="tryButton">OK</button>
+				</div>
+				<p id="cntr"></p>
+			</div>
+		</div>
+		<script>
+			let text = 'Для начала игры нажмите кнопку';
+			let enterNumber = ' ';let counter = 0;
+			let quest;
+			let ans;
+
+			document.getElementById('startbtn').onclick = function(){
+				enterNumber = ' ';
+				document.getElementById('enterNumber').innerHTML = enterNumber;
+				document.getElementById('startbtn').style.display = "none";
+				text = 'Введите число от 1 до 100';
+				document.getElementById('pressButton').innerHTML = text;
+				document.getElementById('tryButton').style.display = "inline-block";
+				document.getElementById('textField').style.display = "inline-block";
+				document.getElementById('cntr').style.display = "block";
+				counter = 0;
+				document.getElementById('cntr').innerHTML = `Количество попыток:  ${counter}`;
+				quest = Math.floor(Math.random() * 100 + 1);
+				console.log(quest);
+			}
+
+			document.getElementById('tryButton').onclick = function(){
+				counter++;
+				ans = document.getElementById('textField').value;
+				if (counter>=10) {
+					goToButtonStart();
+				} else if (isNaN(ans)) {
+					checkAnswerText('Прошу ввести число');
+					text = ' ';
+					document.getElementById('pressButton').innerHTML = text;
+					document.getElementById('cntr').innerHTML = `Количество попыток:  ${counter}`;
+					counter--;
+				} else if (ans > 100) {
+					checkAnswerText('Введите число от 1 до 100!');
+					counter--;
+				} else if (quest == ans){
+					rightAnswer();
+				}else if (quest > ans){
+					checkAnswerText('Необходимо больше');
+				} else {
+					checkAnswerText('Необходимо меньше'); 
+				}
+				document.getElementById('cntr').innerHTML = `Количество попыток:  ${counter}`;
+			}
+
+			function goToButtonStart() {
+				document.getElementById('startbtn').style.display = "inline-block";
+				document.getElementById('tryButton').style.display = "none";
+				document.getElementById('textField').style.display = "none";
+				document.getElementById('cntr').style.display = "none";
+				document.getElementById('cntr').innerHTML = "";
+				text = 'Для начала игры нажмите кнопку';
+				document.getElementById('pressButton').innerHTML = text;
+				enterNumber = "";
+				document.getElementById('enterNumber').innerHTML = enterNumber;
+			}
+
+				function rightAnswer() {
+				document.getElementById('textField').style.display = "none";
+				document.getElementById('tryButton').style.display = "none";
+				document.getElementById('cntr').style.display = "none";
+				document.getElementById('pressButton').style.display = "none";
+				enterNumber = `Вы угадали с ${counter} попытки. Сыграем еще раз?`;
+				document.getElementById('enterNumber').innerHTML = enterNumber;
+				document.getElementById('startbtn').style.display = "inline-block";
+				counter = 10;
+			}
+
+			function checkAnswerText(answer) {
+				enterNumber = answer;
+				document.getElementById('enterNumber').innerHTML = enterNumber;   
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+/* global reset */
+html, body, body div, div, span, label, h1, h2, h3, h4, h5, h6, p, a, em, img, s, small, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, button, form, fieldset, article, aside, footer, header, main, nav, section, input, textarea, select, option {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+/* font adjusting hack */
+html * {
+    max-height: 1000000px;
+}
+/* common */
+html {
+   	height: 100%;
+}
+body {
+	font: 100 normal 20px/30px "Times New Romans";
+	background: #f7f7f7;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.h1{
+	text-align: center;
+	color: #3ee916;
+	font-size: 40px;
+	line-height: 50px;
+	font-weight: 50;
+	margin: 35px 0 15px;
+}
+.h2{
+	text-align: center;
+	color: #163ee9;
+	font-size: 30px;
+	line-height: 20px;
+	font-weight: bold;
+	margin: 35px 0 35px;
+}    
+.odd {                
+	text-align: left;
+	background:#3ee916;
+	margin-right: 650px;
+	padding:10px;
+	border: 10px #163ee9;
+	border-style: ridge;
+	border-radius:2em;                
+	float:right;
+	width:400px;               
+}
+.even {                
+	text-align: left;
+	background:#163ee9;
+	margin-left: 650px;
+	padding:10px;                
+	border: 10px #3ee916;
+	border-style: ridge;
+	border-radius:2em;                
+	float:left;
+	width:420px;
+}
+.line-height {
+	margin-left: 30px;
+}
+b {
+	color:#e9163e;
+	font-width: 200px;
+}
+.content {
+    width: 1200px;
+    margin: 0 auto 100px;
+    overflow: hidden;
+}
+em {
+	color:#e9163e;
+}
+.center {
+	min-width: 1200px;
+	text-align: center;
+font-size: 20px;
+font-weight: 50;
+}
+a {
+	color:#e9163e;
+	text-decoration: none;
+}
+a:hover {
+	color: #00FF00;
+	text-decoration: underline;
+}
+header {
+	border-bottom: 1px solid #b5b7ba;
+	background: #dfdfdf;
+	height: 50px;
+	text-align: center;
+	padding-top: 18px;
+	flex: none;
+}
+header a {
+	color: #008080;
+	height: 30px;
+	display: inline-block;
+	padding-right: 40px;
+}
+header a.selected {
+	color: #FF4500;
+	font-weight: 300;
+	text-decoration: none;
+}
+footer {
+	background-color: #434445;
+	height: 140px;
+	color: #a4a4a4;
+	line-height: 140px;
+	text-align: center;
+}

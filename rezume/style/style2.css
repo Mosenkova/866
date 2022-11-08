@@ -1,0 +1,97 @@
+/* global reset */
+html, body, body div, div, span, label, h1, h2, h3, h4, h5, h6, p, a, em, img, s, small, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, button, form, fieldset, article, aside, footer, header, main, nav, section, input, textarea, select, option {
+    margin: 0px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+/* font adjusting hack */
+html * {
+    max-height: 1000000px;
+}
+/* common */
+html {
+   	height: 100%;
+}
+.table {
+	outline: 1px solid black;
+	display: grid;
+	width: 920px;
+	height: 920px;
+	background: lightgray;
+	grid-template-rows: 42px repeat(8, 1fr) 42px;
+	grid-template-columns: 42px repeat(8, 1fr) 52px;
+margin: 0 100px 20px;
+}
+.field {
+	grid-area: 2/2/10/10;
+	display: grid;
+	grid-template-rows: repeat(8, 1fr);
+	grid-template-columns: repeat(8, 1fr);
+}
+.th {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+.td {
+	flex: none;
+	width: 102px;
+	height: 102px;
+	background: gray;
+	font-size: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.evenodd {
+	background: white;
+}
+.center {
+	min-width: 1200px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 50;
+}
+a {
+	color:#e9163e;
+	text-decoration: none;
+}
+a:hover {
+	color: #00FF00;
+	text-decoration: underline;
+}
+header {
+	border-bottom: 1px solid #b5b7ba;
+	background: #dfdfdf;
+	height: 50px;
+	text-align: center;
+	padding-top: 18px;
+	flex: none;
+}
+header a {
+	color: #008080;
+	height: 30px;
+	display: inline-block;
+	padding-right: 40px;
+}
+header a.selected {
+	color: #FF4500;
+	text-decoration: none;
+}
+.h1{
+	text-align: center;
+	color: #2e353d;
+	font-size: 20px;
+	line-height: 55px;
+	margin: 35px 0 15px;
+}
+footer {
+	background-color: #434445;
+	height: 140px;
+	color: #a4a4a4;
+	line-height: 140px;
+	text-align: center;
+}
