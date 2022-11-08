@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Tовар</title>
+        
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/gallery.js"></script>
+        <script defer src="js/lightbox.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+	 <!-- action block -->
+            <section class="action">
+                <div class="container">
+                    <p>БЕЗ СКИДОК<br>СОБИРАЕМ ЧЕЛЮСТЬ</p>
+                    <p>
+                        До окончания осталось:
+                        <span class="action_timer" data-actionend="2022-11-10T12:00:00">&nbsp;</span>
+                    </p>
+                </div>
+            </section>
+        <!-- /action block -->
+        <header class="header">
+            <section class="container">
+                <nav class="topmenu">
+                    <ul class="links_navigation_list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" >Каталог</a></li>
+                        <li><a href="product.html" class="current">Товар</a></li>
+                        
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <section class="container">
+                <div class="header_wrap">
+                
+                    <div class="header_left_logo">
+                        <a title="Logotip" href="index.html">
+                        <img class="logo" alt="Интернет-магазин «Корейские голубчики" src="./images/11.png">
+                        </a>
+                    </div>
+                    
+                    <div class="header_left_block">
+                        <div class="user_location">
+                            <span class="text-title">Ваш город</span>
+                            <span id="city" class="list_city_select" data-modal="city_select"><span></span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="header_center_block">   
+                        <div class="search_form">
+                            <form action="rezultat_poiska.html" method="get">
+                                <input class="input input_search" placeholder="Поиск по товарам">
+                                <button class="button button_search" type="submit">Поиск</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header_right_enter">
+                        <a class="link_enter" href="#">
+                            <span>Личный кабинет</span>
+                        </a>
+                    </div>
+                    <div class="header_right_basket">
+                        <a class="link_basket" href="order.html">
+                            <span>Корзина</span> 
+                        </a>
+                    </div>
+                </div>             
+            </section>
+        </header>
+    
+        <main class="order">
+            <section class="container">
+                <div class="breadcrumbs">
+                    <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb_list_element">
+                            <a href="index.html">
+                                <span itemprop="name">Главная страница</span>
+                            </a>
+                            <meta itemprop="position" content="1">
+                            <link itemprop="url" href="index.html">
+                        </li>
+                        
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb_list_element">
+                            <a href="catalog.html">
+                                <span itemprop="name">Каталог</span>
+                            </a>
+                            <meta itemprop="position" content="2">
+                            <link itemprop="url" href="catalog.html">
+                        </li>
+                        
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb_list_element">
+                            <span itemprop="name">Товар</span>
+                            <meta itemprop="position" content="3">
+                            <link itemprop="url" href="product.html">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container">
+                <div class="product" data-product-id="makgolli" itemscope itemtype="https://schema.org/Product">
+                    <div class="images">
+                        <div class="bigimage">
+                            <img src="images/5.jpg" alt="бухло" itemprop="image">
+                        </div>
+                        
+                        <div class="gallery">
+                            <div>
+                                <div class="rail">
+                                    <img src="images/5.jpg" alt="бухло" itemprop="image">
+                                    
+                                  
+                                    <img src="images/005.jpg" alt="бухло" itemprop="image">
+                                    
+                                   
+                                </div>
+                            </div>
+                            <button type="button" class="gal_left disabled"><span>&#8249;</span></button>
+                            <button type="button" class="gal_right"><span>&#8250;</span></button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer">
+                        <h1 itemprop="name">Макголи</h1>
+                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <span itemprop="price">600</span>
+                            <meta itemprop="priceCurrency" content="RUB">
+                        </p>
+                        <button type="button" class="btn btn-danger btn-buy">В корзину</button>
+                        <p itemprop="description">
+                        Макголи (макколи, makuly, кор. 막걸리) — это корейский густой неочищенный алкогольный напиток, который готовят из забродивших злаков, проще говоря это самая настоящая брага.Макголи имеет кисло сладкий вкус и содержит много питательных элементов, включая сахар.С древних времен корейские крестьяне пили макголи, чтобы снять усталость. Крепость его составляет всего 6-7 градусов и в нем содержится очень много пищевых волокон, которые помогают предотвращать запоры и лечить болезни кровеносных сосудов.Кроме того, в макголи содержится большое количество лакто бактерий, которые уничтожают вредные бактерии в желудке и укрепляют иммунитет.
+
+                        </p>
+                        <div class="add_table">
+                            <table class="nutrition_facts">
+                                <tbody>
+                                    <tr class="nutrition_facts_title">
+                                        <th colspan="5">Пищевая ценность в 100 граммах:</th>
+                                    </tr>
+                                    <tr class="nutrition_facts_title">
+                                        <td>Белки</td>
+                                        <td>Жиры</td>
+                                        <td>Углеводы</td>
+                                        
+                                        <td>Энергетическая ценность</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6 г</td>
+                                        <td>0 г</td>
+                                        <td>13 г</td>
+                                        <td>47 ккал/196 кДж</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    
+        <footer class="footer">
+            <section class="container">
+                <div class="footer_wrap">
+                    <div class="footer_left">
+                        <nav class="footer_menu">
+                            <ul class="footer_links_navigation_list">
+                                <li><a href="index.html">Главная</a></li>
+                                <li><a href="catalog.html">Каталог</a></li>
+                                <li><a href="product.html">Товар</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer_center">
+                        <div class="footer_copyright">
+                            <p class="copyright_text">Интернет-магазин безделушек</p>
+                            <p class="copyright_text">Все права защищены © 2022</p>
+                        </div> 
+                    </div>
+                    <div class="footer_left">
+                        <h4>Наши контакты</h4>
+                        <a href="#">0 000 000-00-00</a>
+                        <p class="footer_info">Время работы отдела продаж:<br>Пн - Вс: 10:00 - 19:00</p>
+                        <p class="footer_info">г. Москва, ул. Звенят Колокола, д.1</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

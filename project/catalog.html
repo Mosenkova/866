@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Каталог</title>
+        
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/slider.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+	<!-- action block -->
+            <section class="action">
+                <div class="container">
+                    <p>БЕЗ СКИДОК<br>СОБИРАЕМ ЧЕЛЮСТЬ</p>
+                    <p>
+                        До окончания осталось:
+                        <span class="action_timer" data-actionend="2022-11-10T12:00:00">&nbsp;</span>
+                    </p>
+                </div>
+            </section>
+        <!-- /action block -->
+        
+        <header class="header">
+            <section class="container">
+                <nav class="topmenu">
+                    <ul class="links_navigation_list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" class="current">Каталог</a></li>
+                        <li><a href="product.html">Товар</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <section class="container">
+                <div class="header_wrap">
+                
+                    <div class="header_left_logo">
+                        <a title="Logotip" href="index.html">
+                        <img class="logo" alt="Интернет-магазин «Корейские безделушки" src="./images/11.png">
+                        </a>
+                    </div>
+                    
+                    <div class="header_left_block">
+                        <div class="user_location">
+                            <span class="text-title">Ваш город</span>
+                            <span id="city" class="list_city_select" data-modal="city_select"><span></span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="header_center_block">   
+                        <div class="search_form">
+                            <form action="rezultat_poiska.html" method="get">
+                                <input class="input input_search" placeholder="Поиск по товарам">
+                                <button class="button button_search" type="submit">Поиск</button>
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="header_right_enter">
+                        <a class="link_enter" href="#">
+                            <span>Личный кабинет</span>
+                        </a>
+                    </div>
+                    <div class="header_right_basket">
+                        <a class="link_basket" href="order.html">
+                            <span>Корзина</span> 
+                        </a>
+                    </div>
+                </div>             
+            </section>
+        </header>
+        
+        
+        <main class="catalog">
+            <section class="container">
+                <aside>
+                    <nav class="catmenu">
+                        <ul class="slider_list">
+                            <li class="slider_list_elements">
+                                <a href="#"><span>Мужское</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#"><span>Пожилой возраст</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Взрослый возраст</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Молодой возраст</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="slider_list_elements">
+                                <a href="#"><span>Женское</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#"><span>Пожилой возраст</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Взрослый возраст</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Молодой возраст</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            
+                        </ul>
+                    </nav>
+                    <!-- /catmenu -->
+                    <div class="filters">
+                        <p>Фильтры</p>
+                        <p>
+                            <label for="amount">Возраст от</label>
+                            <input type="text" id="amount1">
+                            <label for="amount">до</label>
+                            <input type="text" id="amount2">
+                        </p>          
+                        <div id="slider-range"></div>
+                    </div>
+                </aside>
+                
+                <article>
+                    <div class="cat-item">
+                        <a href="#" title="Мужское">
+                            <div class="cat-item-image">
+                                <img src="./images/kim1.jpg" alt="м">
+                            </div>
+                            <span class="cat-title">Мужское</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#" title="Женское">
+                            <div class="cat-item-image">
+                                <img src="./images/pak.jpg" alt="ж">
+                            </div>
+                            <span class="cat-title">Женское</span>
+                        </a>
+                    </div>
+     
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <section class="container">
+                <div class="footer_wrap">
+                    <div class="footer_left">
+                        <nav class="footer_menu">
+                            <ul class="footer_links_navigation_list">
+                                <li><a href="index.html">Главная</a></li>
+                                <li><a href="catalog.html">Каталог</a></li>
+                                <li><a href="product.html">Товар</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer_center">
+                        <div class="footer_copyright">
+                            <p class="copyright_text">Интернет-магазин безделушек</p>
+                            <p class="copyright_text">Все права защищены © 2022</p>
+                        </div> 
+                    </div>
+                    <div class="footer_left">
+                        <h4>Наши контакты</h4>
+                        <a href="#">0 000 000-00-00</a>
+                        <p class="footer_info">Время работы отдела продаж:<br>Пн - Вс: 10:00 - 19:00</p>
+                         <p class="footer_info">г. Москва, ул. Звенят Колокола, д.1</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

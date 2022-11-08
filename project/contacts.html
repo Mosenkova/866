@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Контакты</title>
+        
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+	<!-- action block -->
+            <section class="action">
+                <div class="container">
+                    <p>БЕЗ СКИДОК<br>СОБИРАЕМ ЧЕЛЮСТЬ</p>
+                    <p>
+                        До окончания осталось:
+                        <span class="action_timer" data-actionend="2022-11-10T12:00:00">&nbsp;</span>
+                    </p>
+                </div>
+            </section>
+        <!-- /action block -->
+        <header class="header">
+            <section class="container">
+                <nav class="topmenu">
+                    <ul class="links_navigation_list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" >Каталог</a></li>
+                        <li><a href="product.html">Товар</a></li>
+                       
+                        <li><a href="contacts.html" class="current">Контакты</a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <section class="container">
+                <div class="header_wrap">
+                
+                    <div class="header_left_logo">
+                        <a title="Logotip" href="index.html">
+                        <img class="logo" alt="Интернет-магазин «Корейские безделушки" src="./images/11.png">
+                        </a>
+                    </div>
+                    
+                    <div class="header_left_block">
+                        <div class="user_location">
+                            <span class="text-title">Ваш город</span>
+                            <span id="city" class="list_city_select" data-modal="city_select"><span></span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="header_center_block">   
+                        <div class="search_form">
+                            <form action="rezultat_poiska.html" method="get">
+                                <input class="input input_search" placeholder="Поиск по товарам">
+                                <button class="button button_search" type="submit">Поиск</button>
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="header_right_enter">
+                        <a class="link_enter" href="#">
+                            <span>Личный кабинет</span>
+                        </a>
+                    </div>
+                     <div class="header_right_basket">
+                        <a class="link_basket" href="order.html">
+                            <span>Корзина</span> 
+                        </a>
+                    </div>
+                </div>             
+            </section>
+        </header>
+    
+        <main>
+            <section class="container">
+                <div class="contacts_block">
+                    <div class="adress" itemprop="adress" itemtype="http://schema.org/PostalAddress">
+                        <h2>Контакты</h2>
+                        <p>
+                            <strong>
+                                <span itemprop="name">Интернет-магазин "Корейские безделушки"</span>
+                            </strong>
+                        </p>
+                        <br>
+                        <p>
+                            <strong>Адрес:</strong>
+                            <span>г. Москва, ул.Звенят Колокола, д.1</span>
+                        </p>
+                        <br>
+                        <p><strong>Прием заказов и служба поддержки клиентов</strong></p>
+                        <p> </p>
+                        <p>
+                            <span><strong>Телефон интернет-магазина:  </strong>0 000 000-00-00</span>
+                            <br>
+                            <strong>Прием и обработка заказов:  </strong>
+                            <a style="color: #428bca;" href="#">
+                                <span itemprop="email">sales@koreets.ru</span>
+                            </a>
+                            <br>
+                            <strong>Служба контроля качества:  </strong>
+                            <a style="color: #428bca;" href="#">
+                                <span itemprop="email">service@koreets.ru</span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="contacts_forms">
+                        <form id="mess_form" class="message_form" method="post">
+                            <div class="form_group">
+                                <label>Ваше имя</label>
+                                <input class="form_control" name="message_name" type="text" placeholder="Ваше имя*">
+                            </div>
+                            <div class="form_group">
+                                <label>Ваш адрес электронной почты</label>
+                                <input class="form_control" name="message_email" type="email" placeholder="E-mail*">
+                            </div>
+                            <div class="form_group">
+                                <label>Сообщение</label>
+                                <textarea class="form_control_text" name="message_message"></textarea>
+                            </div>
+                            <div id="message_form_result">
+                                <button class="btn_submit_forms" type="submit">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section class="container">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A053bd947d462cc1a45aeba4070defff75501905071c0eaf68436ac9976ec698c&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
+            </section>
+        </main>
+    
+        <footer class="footer">
+            <section class="container">
+                <div class="footer_wrap">
+                    <div class="footer_left">
+                        <nav class="footer_menu">
+                            <ul class="footer_links_navigation_list">
+                                <li><a href="index.html">Главная</a></li>
+                                <li><a href="catalog.html">Каталог</a></li>
+                                <li><a href="product.html">Товар</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer_center">
+                        <div class="footer_copyright">
+                            <p class="copyright_text">Интернет-магазин безделушек</p>
+                            <p class="copyright_text">Все права защищены © 2022</p>
+                        </div> 
+                    </div>
+                    <div class="footer_left">
+                        <h4>Наши контакты</h4>
+                        <a href="#">0 000 000-00-00</a>
+                        <p class="footer_info">Время работы отдела продаж:<br>Пн - Вс: 10:00 - 19:00</p>
+                        <p class="footer_info">г. Москва, ул. Звенят Колокола,, д.1</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

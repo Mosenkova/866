@@ -5,119 +5,120 @@
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image"/x-icon" href="./favicon.ico">
-
+		<link rel="icon" type="image" href="./favicon.ico">
 		<title>Игра "Угадай число"</title>
 
 		<style>
 			#textField, #tryButton, #showCounter {
-			display: none;
+				display: none;
 			}
 
 			body {
-			letter-spacing: 0.06em;
-			background-image: url("fon.jpg");
-			background-repeat: no-repeat;
-			height: 92.9vh;
-			background-size: cover;
+				letter-spacing: 0.06em;
+				background-image: url("fon.jpg");
+				background-repeat: no-repeat;
+				height: 92.9vh;
+				background-size: cover;
 			}
 
 			h1 {
-			font: 32px/48px, sans-serif;
-			color: #FF00FF;
-			text-shadow: 1px 1px 1px;
-			text-align: center;
-			margin: 50px auto 20px;
+				font: 32px/48px, sans-serif;
+				color: #0c229f;
+				text-shadow: 1px 1px 1px;
+				text-align: center;
+				margin: 20px auto 20px;
 			}
 
 			#pressButton {
-			font: 18px/24px;
-			color: #4B0082; 
-			
-			text-align: center;
-			margin: 20px auto;
+				font: 18px/24px;
+				color: #4B0082;
+				text-align: center;
+				margin: 20px auto;
 			}
 
 			#startbtn {
-			color: red;
-			font: 16px/24px, sans-serif;
-			text-transform: uppercase;
-			letter-spacing: 0.1em;
-			width: 200px;
-			height: 50px;
-			border-radius: 50px;
-			border: none;
-			box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-			display: block;
-			margin: 50px auto;
-			cursor: pointer;
+				color: red;
+				font: 16px/24px, sans-serif;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				width: 200px;
+				height: 50px;
+				border-radius: 50px;
+				border: none;
+				box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+				display: block;
+				margin: 50px auto;
+				cursor: pointer;
 			}
 
 			.wrapper {
-			border: 1px solid DarkGoldenRod; 
-			width: 500px;
-			height: 400px;
-			margin: 0 auto;
-			display: flex;
-			flex: none;
-			flex-direction: column;
-			gap: 5px;
-			background: rgba(220, 220, 220,.4);
-			border-radius: 30px;
-			justify-content: center;
+				border: 1px solid DarkGoldenRod;
+				width: 500px;
+				height: 440px;
+				margin: auto;
+				display: flex;
+				flex: none;
+				flex-direction: column;
+				gap: 5px;
+				background: rgba(220, 220, 220,.4);
+				border-radius: 30px;
+				justify-content: center;
 			}
 
 			.inner1 {
-			margin: 0 auto;
+				margin: 0 auto;
 			}
 
 			.inner2 {
-			margin: 0 auto;
-			padding: 0 20px;
+				margin: 0 auto;
+				padding: 0 auto;
 			}
 
+
 			.inner3 {
-			margin: 0 auto;
+				margin: 0 auto;
+				padding-top: 10px;
 			}
 
 			#tryButton {
-			color: black;
-			font: 24px/32px;
-			text-transform: uppercase;
-			width: 108px;
-			height: 92px;
-			border-radius: 10px;
-			border: 2px solid black;
-			margin: 20px;
-			cursor: pointer;
+				color: black;
+				font: 24px/32px;
+				text-transform: uppercase;
+				width: 108px;
+				height: 92px;
+				border-radius: 10px;
+				border: 2px solid black;
+				margin: 20px;
+				cursor: pointer;
 			}
 
 			input {
-			display: block;
+				display: block;
 			}
 
 			#textField {
-			width: 100px;
-			height: 86px;
-			text-align: center;
-			border-radius: 10px;
-			border: 2px solid black;
-			margin: 20px;
+				width: 100px;
+				height: 86px;
+				text-align: center;
+				border-radius: 10px;
+				border: 2px solid black;
+				margin: 20px;
 			}
 
 			#enterNumber {
-			font: 22px/32px;
-			color: #800000;
-			text-align: center;
-			margin: 0px auto;
+				font: 20px/30px;
+				color: #800000;
+				position: fixed;
+				display: block; width: 23%; height: auto; margin: 0 auto;
+				text-align: center;
 			}
 
 			#cntr {
-			font: 18px/24px;
-			color: #CD5C5C;
-			margin: 15px 0 15px 0;
-			padding-left: 10px;
-			text-align: center;
+				font: 18px/24px;
+				color: #CD5C5C;
+				margin: 15px 0 15px 0;
+				padding-left: 10px;
+				text-align: center;
 		}
 
 		</style>
@@ -132,12 +133,13 @@
 			<div class="inner2">
 				<h5 id="enterNumber"></h5>
 				<div class="inner3">
-					<input type="text" id="textField">
+					<label for="textField"><input type="text" id="textField"></label>
 					<button type="button" id="tryButton">OK</button>
 				</div>
-				<p id="cntr"></p>
 			</div>
+			<p id="cntr"></p>
 		</div>
+
 		<script>
 			let text = 'Для начала игры нажмите кнопку';
 			let enterNumber = ' ';let counter = 0;
